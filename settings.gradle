@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        // Xposed API 所在仓库
+        maven { url 'https://api.xposed.info/' }
+    }
+}
+
+rootProject.name = 'BTFixOffline'
+include ':app'

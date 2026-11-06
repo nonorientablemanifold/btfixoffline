@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.btfixoffline'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.btfixoffline"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            // 模块代码很小，混淆没有收益，也方便别人审阅
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    // Xposed API 只在编译期需要，绝对不能被打进 APK
+    compileOnly 'de.robv.android.xposed:api:82'
+}

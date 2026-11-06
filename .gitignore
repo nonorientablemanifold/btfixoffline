@@ -1,0 +1,13 @@
+# Gradle / IDE
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+captures/
+
+# 构建产物与签名材料一律不要进仓库
+*.apk
+*.apk.idsig
+*.keystore
+*.jks

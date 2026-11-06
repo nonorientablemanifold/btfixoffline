@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  BT 离线改名（btfixoffline）
+  一个只针对 MIUI/HyperOS「设置」做注入的 Xposed 模块。
+
+  注意：
+  - 模块本身没有 Activity，不会出现在桌面，安装后请在 LSPosed / Vector 管理器里启用。
+  - xposedscope 只是「建议作用域」。若需要蓝牙进程内的属性同步生效，
+    请手动在作用域里再勾上 com.android.bluetooth。
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.btfixoffline"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="34" />
+
+    <application
+        android:label="BT离线改名"
+        android:hasCode="true">
+
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="绕开设置里蓝牙改名的联网校验，仅注入 com.android.settings" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="93" />
+        <meta-data
+            android:name="xposedscope"
+            android:value="com.android.settings" />
+    </application>
+</manifest>
