@@ -78,8 +78,10 @@
 
 ## 4. 使用
 
+**安装包**：从 [Releases](https://github.com/nonorientablemanifold/btfixoffline/releases/latest) 下载 `BTFixOffline-1.1.apk` 直接安装——LSPosed 模块就是普通 APK，装完在模块列表里启用即可。
+
 1. 需要 root + LSPosed / Vector（本机用的是 Vector 2.2）。
-2. 安装构建出来的 APK（仓库里不带成品，见第 5 节）。模块**没有 Activity、没有桌面图标**，安装后在 LSPosed / Vector 的模块列表里启用。
+2. 安装 Release 里的 APK，或者自己构建（见第 5 节）。模块**没有 Activity、没有桌面图标**，安装后在 LSPosed / Vector 的模块列表里启用。
 3. 作用域：
    - 必选：`com.android.settings`
    - 建议：`com.android.bluetooth`（属性同步）
@@ -168,7 +170,7 @@ logcat -b main -b system -b events -b crash -c
   4. `app/src/main/java/` 下的目录结构（包名要和目录一致）
 - `LICENSE` 里的 `btfixoffline contributors` 换成你自己的名字或 ID。
 - **不要把 `build/debug.keystore` 提交上去。** 那是一次性调试密钥，`.gitignore` 里已经挡掉了 `*.keystore`；正式发布请自己生成并妥善保存密钥（模块更新必须用同一个签名）。
-- 仓库里不要放成品 APK，交给 Releases 或 CI 构建。
+- APK 不要提交进 git，挂到 Releases 里。
 
 ---
 
