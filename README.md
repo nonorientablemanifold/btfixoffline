@@ -79,7 +79,7 @@
 ## 4. 使用
 
 1. 需要 root + LSPosed / Vector（本机用的是 Vector 2.2）。
-2. 安装 `app-release.apk`（或自己构建的 APK）。模块**没有 Activity、没有桌面图标**，安装后在 LSPosed / Vector 的模块列表里启用。
+2. 安装构建出来的 APK（仓库里不带成品，见第 5 节）。模块**没有 Activity、没有桌面图标**，安装后在 LSPosed / Vector 的模块列表里启用。
 3. 作用域：
    - 必选：`com.android.settings`
    - 建议：`com.android.bluetooth`（属性同步）
